@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class FruitCollisionResolver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<Fruit> fruitTriggerList;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

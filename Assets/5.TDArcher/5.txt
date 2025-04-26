@@ -1,0 +1,17 @@
+Một game phòng thủ tháp cần lập trình cho cung thủ đứng trên tháp luôn luôn bắn trúng địch trong tầm bắn.
+Địch thì di chuyển theo một quỹ đạo ngẫu nhiên
+Mũi tên thì di chuyển tuân theo trọng lực.
+Hỏi có cách nào lập trình mũi tên di chuyển đảm bảo tất cả yêu cầu trên không? nếu có thì cách đó là gì?
+Nếu không có thì có cách nào gần thoả mãn các yêu cầu nói trên nhất?
+
+///
+
+Trên thực tế về đạn đạo thì rất khó có thể bắn trúng 1 mục tiêu đang di chuyển với 1 quỹ đạo không biết trước do mũi tên cần có thời gian di chuyển tới mục tiêu, trừ trường hợp duy nhất là tốc độ viên đạn/mũi tên cực nhanh hoặc có thể tới mục tiêu ngay lập tức(triệt tiêu thời gian di chuyển).
+Nếu mũi tên không di chuyển tuân theo trọng lực thì có thể làm mũi tên bám theo mục tiêu(homing).
+
+Sau đây là phương án đơn giản nhất mình nghĩ ra để đảm bảo tất cả các yêu cầu trên. Phương án này không thể chắc chắn trúng 100% nhưng cũng có thể đáp ứng được 1 phần nào. 
+Phương án này dựa trên việc dò rada máy bay và bắn tên lửa phòng không chặn đầu.
+Có thể áp dụng các phương pháp dự đoán điểm di chuyển kế tiếp của mục tiêu:
+
+- Lưu trữ n vị trí của mục tiêu trong x giây, có thể áp dụng nội suy tuyến tính để ước tính vị trí kế tiếp của mục tiêu.
+- Tính toán thời gian bay, góc bắn, quỹ đạo bắn của mũi tên để bắn trúng vị trí vừa ước tính.

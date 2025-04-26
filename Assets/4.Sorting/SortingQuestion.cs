@@ -7,10 +7,10 @@ using System.Linq;
 
 public class SortingQuestion
 {
-    static int inputCount = 100;
-    static int minNumber = 1;
-    static int maxNumber = 1000;
-    static bool isManualInput = false; //switch this to false if you want to self generate unique list or just lazy to type
+    static readonly int inputCount = 100;
+    static readonly int minNumber = 1;
+    static readonly int maxNumber = 1000;
+    static readonly bool isManualInput = false; //switch this to false if you want to self generate unique list or just lazy to type
 
     static List<int> inputList;
 
@@ -23,7 +23,8 @@ public class SortingQuestion
             RandomGenerateInput();
 
         QuickSort(inputList, 0, inputList.Count - 1);
-        DoubleCheck();
+        Console.WriteLine("After Sort");
+        CheckListElements();
     }
 
     #region Input
@@ -33,15 +34,12 @@ public class SortingQuestion
         inputList = new();
         for (int i = 1; i < inputCount + 1; i++)
         {
-            //Console.WriteLine($"Please input number of position {i}");
-            //int t = Console.ReadLine();
-            //randomInput.Add(t);
             inputList.Add(ManualInputChecker(i));
         }
-        DoubleCheck();
+        CheckListElements();
     }
 
-    public static void DoubleCheck()
+    public static void CheckListElements()
     {
         if (inputList != null)
         {
