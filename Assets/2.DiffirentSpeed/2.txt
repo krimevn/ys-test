@@ -1,0 +1,17 @@
+"Tình huống: bạn được nhận một dự án do 1 dev khác chuyển giao qua. 
+Bạn phát hiện khi chạy trên editor thì nhân vật di chuyển rất nhanh. 
+Nhưng khi chạy trên device thì nhân vật lại di chuyển rất chậm. 
+Bạn có phỏng đoán như thế nào về tình huống này, cách khắc phục là gì?"
+
+Nhiều khả năng phần code di chuyển đã sử dụng qua Update và tốc độ di chuyển đã không được nhân với deltaTime để đảm bảo tính nhất quán.
+Trên editor thường chạy trên 1 PC nên framerate sẽ cao hơn nhiều so với chạy trên thiết bị thực tế (thường là mobile).
+Việc này dẫn tới Update chạy trên editor nhanh hơn so với trên thiết bị thực tế -> nhân vật trên editor di chuyển nhanh hơn.
+
+Cách khắc phục nếu rơi vào đúng trường hợp ở trên thì chỉ cần tính toán vị trí ở frame tiếp theo của nhân vật bằng cách dùng tốc độ nhân với Time.deltaTime để tính vị trí tại thời điểm đó.
+void Update()
+{
+	character.transform.position += speed * Time.deltaTime;
+}
+
+Cũng có trường hợp sẽ sử dụng FixedUpdate thay vì Update, nhưng nếu cấu trúc sử dụng giống như trên thì sẽ dùng Time.fixedDeltaTime thay vì Time.deltaTime. 
+Tuy nhiên trường hợp này thường không xảy ra tốc độ di chuyển khác trên editor với device thực do FixedUpdate sẽ chạy cố định theo Fixed Timestep(default 0.02s).
