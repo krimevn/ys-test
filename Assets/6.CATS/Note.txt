@@ -1,0 +1,3 @@
+Mở file diagram bằng link https://app.diagrams.net/ hoặc https://draw.io
+
+Phiên bản này có thể không đầy đủ do không thể down được game(region lock) nên không thể test trực tiếp.
