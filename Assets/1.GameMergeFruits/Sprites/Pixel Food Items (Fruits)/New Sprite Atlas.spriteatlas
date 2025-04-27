@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 2
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: d1b4b90a9f2f32c4bb2db70df06354b5, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: c101120180238f84a815184ff77b602b, type: 3}
+  - {fileID: 21300000, guid: 5079a2e2aebb0184b8aee292f0a23e9c, type: 3}
+  - {fileID: 21300000, guid: 4a749b630434e314e8752f3083683ebb, type: 3}
+  - {fileID: 21300000, guid: ee93dcd3dfc9c3242b243fa7c49a506e, type: 3}
+  - {fileID: 21300000, guid: 70df993518474404f8b8f8ee833a635f, type: 3}
+  - {fileID: 21300000, guid: f07014459b3d8704292a3bab425baf73, type: 3}
+  - {fileID: 21300000, guid: 25eb3476a6ad1264ebf8a2f88584d85a, type: 3}
+  - {fileID: 21300000, guid: f262d89669c2e1e468c5609c48e1ae20, type: 3}
+  - {fileID: 21300000, guid: 31b1318742e8379498cc296c5dfe037d, type: 3}
+  - {fileID: 21300000, guid: b838e708c580ab74cb45bd643760c167, type: 3}
+  - {fileID: 21300000, guid: 5cd8e3a9e11df274caf8a8d170fb8d62, type: 3}
+  - {fileID: 21300000, guid: f329ad2a98aea5b499d369ced86e7167, type: 3}
+  - {fileID: 21300000, guid: 39fef95ada246cf43b85cc6bc498aaf0, type: 3}
+  - {fileID: 21300000, guid: afcb239a9a5823342960f98f235d76e8, type: 3}
+  - {fileID: 21300000, guid: 1e6fbf6be8d4b8f4a93b5e9df1c9c98c, type: 3}
+  - {fileID: 21300000, guid: 9f3ee47bb70d4ce47941885d71cebbb8, type: 3}
+  - {fileID: 21300000, guid: ac66ab9b060c95645b633d25d1a1434a, type: 3}
+  - {fileID: 21300000, guid: 4348e1db336f23c498ae4007470d22e9, type: 3}
+  - {fileID: 21300000, guid: 81def50cb8bf8dc48950b7df63d444f4, type: 3}
+  - {fileID: 21300000, guid: d6030d4c194a3874ea275a2cb6c121d4, type: 3}
+  - {fileID: 21300000, guid: cb2a358cb282dd34d9b866d1e6b70838, type: 3}
+  - {fileID: 21300000, guid: 7660b40d1800e9d4cbc840c07030de47, type: 3}
+  - {fileID: 21300000, guid: 33b4ba8d7360bde4b8fa407221c5ef6f, type: 3}
+  - {fileID: 21300000, guid: 6ca8c74ed9d3e044dadb75bf23419b26, type: 3}
+  - {fileID: 21300000, guid: d05d791ff7c93ca4cb9e845e17cb18ae, type: 3}
+  - {fileID: 21300000, guid: e6ae15df6c2fc8342952bad66a042cbf, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Coconut(Outside)
+  - Avocado(Outside)
+  - Cherry
+  - Blueberry
+  - Apple(Green).png
+  - Grape(Red)
+  - Grapefruit
+  - Melon(Outside)
+  - Pear(Yellow)
+  - Pear(Green)
+  - Avocado(Inside)
+  - Pineapple
+  - Mango
+  - Melon(Inside)
+  - Peach
+  - Apple(Yellow).png
+  - Kiwi(Outside)
+  - Strawberry
+  - Kiwi(Inside)
+  - Redberry
+  - Banana
+  - Apple
+  - Orange
+  - Grape(Blue)
+  - Grape(Green)
+  - Coconut(Inside)
+  m_RenderDataMap: {}
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0

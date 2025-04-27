@@ -8,11 +8,26 @@ public class FruitConfig : ScriptableObject
     public List<FruitData> FruitDataList;
     static FruitConfig _instance;
     public static FruitConfig instance => _instance ?? (_instance = Resources.Load<FruitConfig>("Configs/FruitConfig"));
+    public int MaxFruitIndexCanDrop;
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (FruitDataList != null)
+        {
+            for (int i = 0; i < FruitDataList.Count; i++)
+            {
+                FruitDataList[i].FruitIndex = i;
+            }
+        }
+    }
+#endif
 }
 
 [System.Serializable]
 public class FruitData
 {
+    public int FruitIndex;
     public string FruitName;
     public float Scale;
     public float Weight;

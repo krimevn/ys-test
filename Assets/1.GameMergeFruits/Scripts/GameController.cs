@@ -11,7 +11,8 @@ public class GameController : MonoBehaviour
     }
 
     public bool canDropNextFruit = false;
-    
+    [SerializeField] SpriteRenderer nextFruitShow;
+    [SerializeField] FruitData nextFruitData;
 
     private void Awake()
     {
@@ -21,37 +22,51 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         canDropNextFruit = true; //allow game start
+        RandomNextFruit();
     }
 
-    void RandomNextFruit()
+    public void RandomNextFruit()
     {
-        int r = Random.Range(0, 4);
-        
+        //can do controllable ratio spawn too, but no time.
+        int r = Random.Range(0, FruitPoolingController.instance.fruitConfig.MaxFruitIndexCanDrop);
+        nextFruitData = FruitPoolingController.instance.GetFruitData(r);
+        if (nextFruitData == null)
+        {
+            nextFruitData = FruitPoolingController.instance.GetFruitData(0);
+        }
+        ShowNextDropFruit(nextFruitData);
     }
-    void ShowNextDropFruit()
-    { 
-        
+    void ShowNextDropFruit(FruitData data)
+    {
+        nextFruitShow.gameObject.SetActive(true);
+        nextFruitShow.sprite = data.FruitSprite;
+        nextFruitShow.transform.localScale = new Vector2(data.Scale,data.Scale);
     }
 
-    private void FixedUpdate()
+    void HideNextDropFruit()
     {
-        //if (Input.touchCount > 0) //forgot, this only valid in mobile
+        nextFruitShow.gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        //if (Input.touchCount > 0) //forgot, this only valid in mobile device
         //{
         //}
-        
-        //raycast check touch wall or not ... 
-        if (Input.GetMouseButtonUp(0) && canDropNextFruit)
+
+        if (Input.GetMouseButtonDown(0) && canDropNextFruit)
         {
             var mousePos = Input.mousePosition;
             var dropPos = Camera.main.ScreenToWorldPoint(mousePos);
             var f = FruitPoolingController.instance.GetFruitFromPool();
 
-            f.gameObject.SetActive(true);
+            f.ChangeFruit(nextFruitData);
+            f.EnableFruit();
+            
             f.transform.localPosition = new Vector2(dropPos.x, Camera.main.orthographicSize-1);
+            //HideNextDropFruit();
+            RandomNextFruit();
             canDropNextFruit = false;
-
         }
     }
-    
-
 }

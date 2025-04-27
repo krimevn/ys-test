@@ -62,4 +62,32 @@ public class FruitPoolingController : MonoBehaviour
     {
         f.gameObject.SetActive(false);
     }
+
+    public FruitData GetFruitData(int index)
+    {
+        if (index < fruitConfig.FruitDataList.Count)
+        {
+            return fruitConfig.FruitDataList[index];
+        }
+        else
+            return null;
+    }
+
+    public FruitData GetNextFruitData(int index)
+    {
+        if (index < fruitConfig.FruitDataList.Count)
+        {
+            //if (index + 1 < fruitConfig.FruitDataList.Count)
+            //{
+            //    return fruitConfig.FruitDataList[index + 1];
+            //}
+            //else
+            //{
+            //    return null;
+            //}
+            return GetFruitData(index + 1);
+        }
+        else
+            return null;
+    }
 }

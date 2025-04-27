@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8524952610263204447}
   - component: {fileID: 8524952610263204445}
   - component: {fileID: 8524952610263204444}
-  m_Layer: 0
+  - component: {fileID: 1452698900204302567}
+  m_Layer: 7
   m_Name: Fruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,6 +119,12 @@ MonoBehaviour:
   coll: {fileID: 8524952610263204447}
   rig: {fileID: 8524952610263204444}
   spriteRend: {fileID: 8524952610263204441}
+  fruitData:
+    FruitIndex: 0
+    FruitName: 
+    Scale: 0
+    Weight: 0
+    FruitSprite: {fileID: 0}
 --- !u!50 &8524952610263204444
 Rigidbody2D:
   serializedVersion: 4
@@ -139,3 +146,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!68 &1452698900204302567
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8524952610263204440}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5, y: 0}
+  - {x: 0.5, y: 0}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

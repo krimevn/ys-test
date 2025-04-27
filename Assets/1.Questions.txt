@@ -1,0 +1,10 @@
+- Làm thế nào để các quả lăn nhiều hơn?
+//
+Có thể custom shape của collider quả bằng cách sử dụng EdgeCollider2D. Khi tạo data sẽ phải lưu lại thông số các point collider của các loại quả vào FruitConfig, có thể viết 1 custom tool editor để GD có thể làm lưu nhanh chỉ với vài nút bấm.
+Cũng có thể thêm 1 lực xoay ngẫu nhiên vào quả khi mới thả.
+
+
+- Làm thế nào để các quả khi thả tạo tác động mạnh hơn lên các quả khác?
+//
+Có thể tăng mass của quả(trong FruitConfig là weight)
+Cũng có thể sử dụng custom PhysicMaterial để thêm chút bouncy để tạo thêm lực phản hồi sau khi quả rơi.
