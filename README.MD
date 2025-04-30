@@ -1,0 +1,1 @@
+I'm going to improve and work further more on this project just because of fun and want to make it become a completed game, not just a core mechanic.
