@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
         RandomNextFruit();
     }
 
-    public void RandomNextFruit()
+    public void RandomNextFruit() //possible do booster change next fruit
     {
         //can do controllable ratio spawn too, but no time.
         int r = Random.Range(0, FruitPoolingController.instance.fruitConfig.MaxFruitIndexCanDrop);
@@ -50,11 +50,19 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.touchCount > 0) //forgot, this only valid in mobile device
-        //{
-        //}
+        if (!canDropNextFruit) return; 
+        
+        //do raycast check, only valid drop while on drop zone. Avoid UI, or change drop control to other, use event ipointer ?
 
-        if (Input.GetMouseButtonDown(0) && canDropNextFruit)
+        if (Input.GetMouseButtonDown(0))
+        {
+            //show next fruit icon on top of the drop position
+            var mousePos = Input.mousePosition;
+            var dropPos = Camera.main.ScreenToWorldPoint(mousePos);
+
+        }
+
+        if (Input.GetMouseButtonUp(0))
         {
             var mousePos = Input.mousePosition;
             var dropPos = Camera.main.ScreenToWorldPoint(mousePos);

@@ -23,6 +23,8 @@ public class BounderController : MonoBehaviour
         SetupBoundary();
     }
 
+    //should move bounder down, around 20% ? or we need some design ? 
+
     void SetupBoundary()
     {
         float height = 2f * mainCamera.orthographicSize;

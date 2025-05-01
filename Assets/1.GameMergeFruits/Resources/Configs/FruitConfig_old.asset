@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a2e34f6099b1343a4e3bfa0a0ef4d5, type: 3}
+  m_Name: FruitConfig_old
+  m_EditorClassIdentifier: 
+  FruitDataList:
+  - FruitIndex: 0
+    FruitName: Cherry
+    Scale: 0.5
+    Weight: 1
+    FruitSprite: {fileID: 21300000, guid: 4a749b630434e314e8752f3083683ebb, type: 3}
+  - FruitIndex: 1
+    FruitName: Strawberry
+    Scale: 1
+    Weight: 1.2
+    FruitSprite: {fileID: 21300000, guid: 4348e1db336f23c498ae4007470d22e9, type: 3}
+  - FruitIndex: 2
+    FruitName: Kiwi
+    Scale: 1.5
+    Weight: 1.5
+    FruitSprite: {fileID: 21300000, guid: ac66ab9b060c95645b633d25d1a1434a, type: 3}
+  - FruitIndex: 3
+    FruitName: Orange
+    Scale: 2
+    Weight: 2
+    FruitSprite: {fileID: 21300000, guid: 33b4ba8d7360bde4b8fa407221c5ef6f, type: 3}
+  - FruitIndex: 4
+    FruitName: Melon
+    Scale: 3
+    Weight: 4
+    FruitSprite: {fileID: 21300000, guid: f262d89669c2e1e468c5609c48e1ae20, type: 3}
+  MaxFruitIndexCanDrop: 3
